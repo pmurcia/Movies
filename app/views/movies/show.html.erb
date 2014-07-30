@@ -1,0 +1,46 @@
+<% content_for :header do %>
+	<h1><%= @movie.title %> </h1>
+<% end %>
+<% content_for :body do %>
+	<table>
+		<tr>
+		<td  class="title">Title</td>
+		<td > <%= @movie.title%> </td>
+		</tr>
+
+		<tr>
+		<td class="title">Poster</td>
+		<td> <img src='<%= @movie.poster %>'> </td>
+		</tr>
+
+		<tr>
+		<td class="title">Plot</td>
+		<td> <%= @movie.plot %> </td>
+		</tr>
+
+		<tr>
+		<td class="title">Year</td>
+		<td> <%= @movie.year %> </td>
+		</tr>
+
+		<tr>
+		<td class="title"> Cast</td>
+		<td>
+			<% @movie.cast_members.each do |member| %>
+			<%= member.full_name + ', '%>
+			<% end %>
+		</td>
+		</tr>	
+		</table>
+<% end %>
+<!-- 
+# <% @movie.attributes.each #do |attr_name, attr_value| %>
+# 		<tr>
+# 		<td> <%= attr_name.capitalize %> </td>
+# 		<% #if attr_name #== #'poster' %>
+# 		<td> <img src='<%= attr_value %>'> </td>
+# 		<% #else %>
+# 		<td> <%= attr_value %> </td>
+# 		<% #end %>
+# 		</tr>
+# 	<% #end %> -->

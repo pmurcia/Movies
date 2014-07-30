@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table>
+		<tr><td>Title</td><td>Poster</td></tr>
+		<% @movies.each do |movie| %>
+		<tr>
+			<td><%= movie.title %></td>
+			<td><img src="<%= movie.poster %>"></td>
+		</tr>
+		<% end %>
+	</table>
+</body>
+</html>

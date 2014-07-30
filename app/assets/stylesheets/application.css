@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+ 	margin: 0;
+ }
+img {
+	max-width: 160px;
+	max-height: 240px;
+}
+header, footer{
+	background-color: rgb(116, 116, 207);
+	width: 100%;
+	text-align: center;
+}
+.title{
+	font-weight: bold;
+	font-size: 18px;
+
+}
+
+.offset3{
+	margin-left: 30px;
+}
+tr > td{
+	margin-left: 300px;
+}

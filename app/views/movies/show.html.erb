@@ -32,15 +32,9 @@
 		</td>
 		</tr>	
 		</table>
+		<% if @movie.reviews.present? %>
+		<%= button_to(@movie.title, movie_reviews_path(@movie), :method => "get") %>
+		<% else %>
+		<%= button_to('Be the First to Coment!', new_movie_review_path(@movie.id, 'reviews'), :method => "get") %>
+		<% end %>
 <% end %>
-<!-- 
-# <% @movie.attributes.each #do |attr_name, attr_value| %>
-# 		<tr>
-# 		<td> <%= attr_name.capitalize %> </td>
-# 		<% #if attr_name #== #'poster' %>
-# 		<td> <img src='<%= attr_value %>'> </td>
-# 		<% #else %>
-# 		<td> <%= attr_value %> </td>
-# 		<% #end %>
-# 		</tr>
-# 	<% #end %> -->

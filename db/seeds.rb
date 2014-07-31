@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-i= Imdb::Search.new("Avengers")
+i= Imdb::Search.new("Red")
 movies = i.movies
 selected_movies = movies[0...5]
 selected_movies.each do |a|

@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140731133129) do
   create_table "reviews", force: true do |t|
     t.string   "reviewer"
     t.text     "content"
+    t.integer  "movie_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

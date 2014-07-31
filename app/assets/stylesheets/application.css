@@ -16,6 +16,7 @@
 
 body{
  	margin: 0;
+ 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(228,245,252,1)), color-stop(100%,rgba(42,176,237,1)));
  }
 img {
 	max-width: 160px;

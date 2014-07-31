@@ -32,6 +32,7 @@
 		</td>
 		</tr>	
 		</table>
+		<%= button_to('Return to menu', movies_path, :method => "get") %>
 		<% if @movie.reviews.present? %>
 		<%= button_to(@movie.title, movie_reviews_path(@movie), :method => "get") %>
 		<% else %>

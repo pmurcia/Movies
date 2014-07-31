@@ -3,12 +3,17 @@
 <head>
 	<title></title>
 </head>
+<style>
+	table, tr, td {
+		border: 1px solid black;
+	}
+</style>
 <body>
 	<table>
 		<tr><td>Title</td><td>Poster</td></tr>
 		<% @movies.each do |movie| %>
 		<tr>
-			<td><%= movie.title %></td>
+			<td><%= link_to(movie.title, movie_path(movie)) %></td>
 			<td><img src="<%= movie.poster %>"></td>
 		</tr>
 		<% end %>

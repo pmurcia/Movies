@@ -3,12 +3,28 @@
 <head>
 	<title></title>
 </head>
+<style>
+	div.big{
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-bottom: 50px;
+		border: 2px solid black;
+		max-width: 50%;
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1)));
+	}
+	div.header{
+		border-bottom: 1px solid black;
+	}
+</style>
 <body>
 <% @reviews.each do |e| %>
-<ul>
-	<li><%= e.reviewer %></li>
-	<li><%= e.content %></li>
-</ul>
+<div class="big">
+	<div class="header"><%= e.reviewer %></div>
+	<div><%= e.content %></div>
+</div>
 <% end %>
+
+<%= button_to('Return', movie_path(@movie), :method => "get") %>
+<%= button_to('Create a review!', new_movie_review_path(@movie), :method => "get") %>
 </body>
 </html>

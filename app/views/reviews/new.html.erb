@@ -1,19 +1,27 @@
 <%= form_for [@movie, @review] do |f|%>
-	<%= f.label :reviewer %>
-	<%= f.text_field :reviewer%>
-	<% if @review.errors.any? %>
-	  <% @review.errors[:reviewer].each do |error_msg| %>
-	    <%= error_msg %>
-	  <% end %>
-	<% end %>
+	<div>
+		<div class="button"><%= f.label :reviewer %></div>
+		<div class="button"><%= f.text_field :reviewer%></div>
+		<div class="red">
+			<% if @review.errors.any? %>
+			  <% @review.errors[:reviewer].each do |error_msg| %>
+			    <%= error_msg %>
+			  <% end %>
+			<% end %>
+		</div>
+	</div>
 	<br>
-	<%= f.label :content %>
-	<%= f.text_field :content %>
-	<% if @review.errors.any? %>
-	  <% @review.errors[:content].each do |error_msg| %>
-	    <%= error_msg %>
-	  <% end %>
-	<% end %>
+	<div>
+		<div class="button"><%= f.label :content %></div>
+		<div class="button"><%= f.text_field :content %></div>
+		<div class="red">
+			<% if @review.errors.any? %>
+			  <% @review.errors[:content].each do |error_msg| %>
+			    <%= error_msg %>
+			  <% end %>
+			<% end %>
+		</div>
+	</div>
 	<br>
 
 	<%= f.submit 'Save'%>

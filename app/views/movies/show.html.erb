@@ -32,10 +32,14 @@
 		</td>
 		</tr>	
 		</table>
-		<%= button_to('Return to menu', movies_path, :method => "get") %>
-		<% if @movie.reviews.present? %>
-		<%= button_to(@movie.title, movie_reviews_path(@movie), :method => "get") %>
-		<% else %>
-		<%= button_to('Be the First to Coment!', new_movie_review_path(@movie.id, 'reviews'), :method => "get") %>
-		<% end %>
+		<div class="button">
+			<%= button_to('Return to menu', movies_path, :method => "get") %>
+		</div>
+		<div class="button">
+			<% if @movie.reviews.present? %>
+				<%= button_to(@movie.title, movie_reviews_path(@movie), :method => "get") %>
+			<% else %>
+				<%= button_to('Be the First to Coment!', new_movie_review_path(@movie.id, 'reviews'), :method => "get") %>
+			<% end %>
+		</div>
 <% end %>

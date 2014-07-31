@@ -9,4 +9,7 @@ class MoviesController < ApplicationController
 		render layout: 'movie'
 	end
 	
+	def new
+		
+	end
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/' => 'site#index'
   resources :movies do
     resources :reviews
     # resources :cast_members

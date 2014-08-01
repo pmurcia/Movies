@@ -51,6 +51,7 @@ div.button{
 
 .red {
 	color: red;
+	display: inline-block;
 }
 
 div.big{
@@ -64,4 +65,7 @@ div.big{
 
 div.header{
 	border-bottom: 1px solid black;
+}
+.menu_buttons {
+	text-align: left;
 }

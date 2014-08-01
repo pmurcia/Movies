@@ -3,11 +3,9 @@
 		<div class="button"><%= f.label :reviewer %></div>
 		<div class="button"><%= f.text_field :reviewer%></div>
 		<div class="red">
-			<% if @review.errors.any? %>
-			  <% @review.errors[:reviewer].each do |error_msg| %>
-			    <%= error_msg %>
-			  <% end %>
-			<% end %>
+			<% @review.errors[:reviewer].each do |error_msg| %>
+			  <%= error_msg %>
+			<% end %>	
 		</div>
 	</div>
 	<br>
@@ -15,10 +13,9 @@
 		<div class="button"><%= f.label :content %></div>
 		<div class="button"><%= f.text_field :content %></div>
 		<div class="red">
-			<% if @review.errors.any? %>
-			  <% @review.errors[:content].each do |error_msg| %>
-			    <%= error_msg %>
-			  <% end %>
+			
+			<% @review.errors[:content].each do |error_msg| %>
+			  <%= error_msg %>
 			<% end %>
 		</div>
 	</div>

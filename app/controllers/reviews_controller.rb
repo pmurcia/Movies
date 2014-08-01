@@ -20,9 +20,21 @@ class ReviewsController < ApplicationController
 		end
 	end
 
+	def update
+		@obj = Obj.find(params[:id])
+		if @obj.update_attributes(params[:obj])
+			rediredt_to'/obks/<@obj.id'
+		else
+			@errors = obj.errors.full_messages
+			render 'edit'
+		end
+	end
+
 	private
 
 	def review_params
 		params.require(:review).permit(:reviewer, :content)
 	end
+
+
 end

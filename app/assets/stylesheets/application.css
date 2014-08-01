@@ -69,3 +69,8 @@ div.header{
 .menu_buttons {
 	text-align: left;
 }
+
+footer#nav{
+	position: fixed;
+	bottom: 0px;
+}

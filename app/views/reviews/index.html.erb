@@ -7,7 +7,8 @@
 <% @reviews.each do |e| %>
 <div class="big">
 	<div class="header"><%= e.reviewer %></div>
-	<div><%= e.content %></div>
+	<div><%= e.content %></div> 
+	<div class='header'><%= time_ago_in_words(e.created_at) %>...</div>
 </div>
 <% end %>
 

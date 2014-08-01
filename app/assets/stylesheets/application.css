@@ -74,3 +74,7 @@ footer#nav{
 	position: fixed;
 	bottom: 0px;
 }
+div.time {
+	font-size: 12px;
+	text-align: right;
+}

@@ -1,0 +1,20 @@
+<%= form_for [@movie] do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<br>
+
+	<%= f.label :poster %>
+	<%= f.text_field :poster %>
+	<br>
+
+	<%= f.label :plot %>
+	<%= f.text_field :plot %>
+	<br>
+
+	<%= f.label :year %>
+	<%= f.text_field :year %>
+	<br>
+
+	<%= f.submit 'Save' %>
+
+<% end %>

@@ -5,22 +5,22 @@
 	<table>
 		<tr>
 		<td  class="title">Title</td>
-		<td > <%= @movie.title%> </td>
+		<td > <%= @movie.title%> <%= link_to('Edit', edit_movie_path(@movie)) %> </td>
 		</tr>
 
 		<tr>
 		<td class="title">Poster</td>
-		<td> <img src='<%= @movie.poster %>'> </td>
+		<td> <img src='<%= @movie.poster %>'> <%= link_to('Edit', edit_movie_path(@movie)) %> </td>
 		</tr>
 
 		<tr>
 		<td class="title">Plot</td>
-		<td> <%= @movie.plot %> </td>
+		<td> <%= @movie.plot %> <%= link_to('Edit', edit_movie_path(@movie)) %> </td>
 		</tr>
 
 		<tr>
 		<td class="title">Year</td>
-		<td> <%= @movie.year %> </td>
+		<td> <%= @movie.year %> <%= link_to('Edit', edit_movie_path(@movie)) %> </td>
 		</tr>
 
 		<tr>
